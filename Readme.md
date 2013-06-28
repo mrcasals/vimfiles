@@ -139,3 +139,6 @@ Integration with Rails.
 Comments any kind of code.
 
 * `,co`: In visual mode, comments the selected block.
+
+## TODO
+* Update custom mappings and plugins list.
