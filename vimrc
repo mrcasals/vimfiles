@@ -36,7 +36,6 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'slim-template/vim-slim'
 Bundle 'rking/vim-ruby-refactoring'
 Bundle 'tpope/vim-dispatch'
-Bundle 'airblade/vim-gitgutter'
 
 Bundle 'nono/vim-handlebars'
 Bundle 'kchmck/vim-coffee-script'
