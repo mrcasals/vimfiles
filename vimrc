@@ -27,8 +27,8 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'jmartindf/vim-tcomment'
 Bundle 'kien/ctrlp.vim'
 
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
+" Bundle 'mattn/webapi-vim'
+" Bundle 'mattn/gist-vim'
 
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-fugitive'
@@ -326,11 +326,11 @@ syntax on
 filetype indent plugin on
 
 " Vim Gist
-let g:gist_clip_command = 'pbcopy'
-" let g:gist_clip_command = 'xclip -selection clipboard'
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-let g:gist_post_private = 1
+" let g:gist_clip_command = 'pbcopy'
+" " let g:gist_clip_command = 'xclip -selection clipboard'
+" let g:gist_detect_filetype = 1
+" let g:gist_open_browser_after_post = 1
+" let g:gist_post_private = 1
 
 " Vim dispatch
 autocmd FileType ruby
