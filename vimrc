@@ -183,9 +183,6 @@ set pastetoggle=<F2>
 " Git blame
 vmap <leader>gb :Gblame<CR>
 
-" Execute current buffer as ruby
-" map <leader>r :!ruby -I"lib:test" %<cr>
-
 " Rename current file
 function! RenameFile()
     let old_name = expand('%')
@@ -257,10 +254,6 @@ map <leader>T :call RunNearestTest()<CR>
 " ----------------
 " PLUG-IN SETTINGS
 " ----------------
-
-" Powerline (fancy status bar)
-let g:Powerline_symbols = 'fancy'
-let g:Powerline_cache_enabled = 1
 
 " Ag (Regex-based search)
 nmap <leader>a :Ag
@@ -355,10 +348,8 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>r :call RunAllSpecs()<CR>
 if executable("zeus")
-  let g:rspec_command = "!bundle exec zeus rspec {spec}"
+  let g:rspec_command = "!zeus rspec {spec}"
 endif
 
-imap jk <Esc>
-
-nnoremap <leader>t :CtrlPTag<cr>
+nnoremap <leader>c :CtrlPTag<cr>
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
