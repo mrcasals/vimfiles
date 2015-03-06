@@ -24,7 +24,7 @@ Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
 Bundle 'Townk/vim-autoclose'
-Bundle 'jmartindf/vim-tcomment'
+Bundle 'tomtom/tcomment_vim'
 Bundle 'kien/ctrlp.vim'
 
 " Bundle 'mattn/webapi-vim'
