@@ -25,6 +25,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
 Bundle 'Townk/vim-autoclose'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'bling/vim-airline'
 Bundle 'kien/ctrlp.vim'
 
 " Bundle 'mattn/webapi-vim'
@@ -112,6 +113,7 @@ set tw=79
 set t_Co=256
 set iskeyword-=_
 "set clipboard=unnamed
+set re=1
 
 if has("gui_running")
     set guioptions-=T " no toolbar set guioptions-=m " no menus
@@ -274,7 +276,9 @@ let g:AutoCloseProtectedRegions = ["Character"]
 " Ctags
 " You can use Ctrl-] to jump to a function.... Ctrl-p will jump back
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-" map <C-p> :pop<CR>
+map <C-p> :pop<CR>
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
+nnoremap <leader>. :CtrlPTag<cr>
 
 " You can cycle through multiple function definitions using
 " these mappings. This maps to my windows key + left/right arrows
@@ -292,10 +296,16 @@ nmap <silent> <leader>p :NERDTreeToggle<cr>%
 nnoremap <leader>' ""yls<c-r>={'"': "'", "'": '"'}[@"]<cr><esc>
 
 " Syntastic
-let g:syntastic_check_on_open=0
-let g:syntastic_echo_current_error=0
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_echo_current_error=1
 let g:syntastic_auto_jump=0
-let g:syntastic_auto_loc_list=0
 
 " Haml2Slim
 nnoremap <leader>h2s :call Haml2Slim(bufname("%"))<CR>
@@ -340,6 +350,9 @@ autocmd FileType ruby
       \ else |
       \   compiler ruby | setl makeprg=ruby\ -wc\ \"%:p\" |
       \ endif
+
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
+nnoremap <leader>. :CtrlPTag<cr>
 
 " Rspec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
