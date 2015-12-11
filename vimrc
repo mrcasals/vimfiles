@@ -41,6 +41,7 @@ Bundle 'tpope/vim-dispatch'
 Bundle 'nono/vim-handlebars'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
 Bundle 'scrooloose/nerdtree'
 
 Bundle 'vim-scripts/ctags.vim'
@@ -365,3 +366,6 @@ endif
 
 nnoremap <leader>c :CtrlPTag<cr>
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
+
+" vim-jsx config
+let g:jsx_ext_required = 0
