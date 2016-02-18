@@ -35,7 +35,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-cucumber'
 Bundle 'slim-template/vim-slim'
-Bundle 'rking/vim-ruby-refactoring'
+Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'tpope/vim-dispatch'
 
 Bundle 'nono/vim-handlebars'
