@@ -290,7 +290,7 @@ map <F9> :tprev<CR>
 
 " Ctrl-p
 let g:ctrlp_map = '<leader>o'
-let g:ctrlp_custom_ignore = '\v[\/](doc|tmp|log|coverage|node_modules|fixtures/cassettes)$'
+let g:ctrlp_custom_ignore = '\v[\/](doc|tmp|log|coverage|_build|node_modules|fixtures/cassettes)$'
 
 " NERDtree
 nmap <silent> <leader>p :NERDTreeToggle<cr>%
