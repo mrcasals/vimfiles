@@ -52,6 +52,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'codegram/vim-haml2slim'
 Bundle 'majutsushi/tagbar'
 
+Bundle 'elixir-lang/vim-elixir'
+
 " Default color theme
 Bundle 'sjl/badwolf'
 colorscheme badwolf
@@ -288,7 +290,7 @@ map <F9> :tprev<CR>
 
 " Ctrl-p
 let g:ctrlp_map = '<leader>o'
-let g:ctrlp_custom_ignore = '\v[\/](doc|tmp|log|coverage|fixtures/cassettes)$'
+let g:ctrlp_custom_ignore = '\v[\/](doc|tmp|log|coverage|node_modules|fixtures/cassettes)$'
 
 " NERDtree
 nmap <silent> <leader>p :NERDTreeToggle<cr>%
