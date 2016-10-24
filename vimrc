@@ -373,3 +373,5 @@ nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
 " vim-jsx config
 let g:jsx_ext_required = 0
+
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
