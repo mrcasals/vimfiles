@@ -9,7 +9,7 @@ vimfiles](https://github.com/codegram/vimfiles)!
 
 If you trust me, do this:
 
-    rm -fR ~/.vim && git clone https://github.com/mrcasals/vimfiles.git ~/.vim && rm ~/.vimrc && ln -s ~/.vim/vimrc ~/.vimrc && git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle && vim +BundleInstall +qa! && clear && echo "Done! :)"
+    rm -fR ~/.vim && git clone https://github.com/mrcasals/vimfiles.git ~/.vim && ln -fs ~/.vim/vimrc ~/.vimrc && git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle && vim +BundleInstall +qa! && clear && echo "Done! :)"
 
 ### Manual way
 
