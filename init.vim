@@ -92,6 +92,8 @@ set shiftround
 set iskeyword-=_
 " Set terminal window
 set title
+" Ignore case on search
+set ignorecase
 
 " Strip trailing whitespace on buffer save/write
 autocmd BufWritePre * :%s/\s\+$//e
