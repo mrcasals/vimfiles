@@ -9,7 +9,6 @@ let mapleader = ","
 call plug#begin('~/.config/nvim/bundle')
 
 Plug 'preservim/nerdtree'
-" Plug 'albfan/ag.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'Townk/vim-autoclose'
