@@ -9,6 +9,7 @@ let mapleader = ","
 call plug#begin('~/.config/nvim/bundle')
 
 Plug 'preservim/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'Townk/vim-autoclose'
@@ -58,7 +59,7 @@ noremap <leader><space> :set hlsearch! hlsearch?<cr>
 " ===========================
 
 " NERDTree config
-nmap <silent> <leader>p :NERDTreeToggle<cr>%
+nmap <silent> <leader>p :NERDTreeTabsToggle<cr>%
 
 " Ag.vim config
 nmap <leader>a :Ag<Space>
