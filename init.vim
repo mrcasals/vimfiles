@@ -24,6 +24,8 @@ Plug 'tpope/vim-dispatch'
 
 Plug 'vim-airline/vim-airline'
 
+Plug 'christoomey/vim-tmux-navigator'
+
 " Color scheme
 Plug 'phanviet/vim-monokai-pro'
 call plug#end()
