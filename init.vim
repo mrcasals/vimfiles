@@ -95,6 +95,8 @@ set iskeyword-=_
 set title
 " Ignore case on search
 set ignorecase
+" Stop showing the current mode (as in `-- INSERT --`) since we have the bar
+set noshowmode
 
 " Strip trailing whitespace on buffer save/write
 autocmd BufWritePre * :%s/\s\+$//e
