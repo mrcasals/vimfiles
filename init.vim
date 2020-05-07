@@ -25,6 +25,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'vim-airline/vim-airline'
 
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
 
 " Color scheme
 Plug 'phanviet/vim-monokai-pro'
@@ -129,22 +130,26 @@ nmap <leader>rr :call RunLastSpec()<CR>
 
 " Run tests
 let s:last_test = ""
+function! RunSpecCommand(command)
+  call VimuxRunCommand(a:command)
+endfunction
+
 function! RunSpecInLine()
   if InSpecFile()
     let s:last_test = @% . ":" . line(".")
-    execute ":Dispatch bin/rspec %:" . line(".")
+    call RunSpecCommand("bin/rspec ". bufname("%") .":" . line("."))
   endif
 endfunction
 
 function! RunSpecFile()
   if InSpecFile()
     let s:last_test = @%
-    execute ":Dispatch bin/rspec %"
+    call RunSpecCommand("bin/rspec " . bufname("%"))
   endif
 endfunction
 
 function! RunLastSpec()
-  execute ":Dispatch bin/rspec " . s:last_test
+  call RunSpecCommand("bin/rspec " . s:last_test)
 endfunction
 
 function! InSpecFile()
