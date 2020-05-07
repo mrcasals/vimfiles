@@ -53,6 +53,9 @@ nnoremap <C-l> <C-w>l
 
 " Search
 noremap <leader><space> :set hlsearch! hlsearch?<cr>
+" Search results centered please
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
 
 " Terminal
 " Close the terminal split
