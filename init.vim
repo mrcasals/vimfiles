@@ -142,7 +142,7 @@ function! RunSpecFile()
 endfunction
 
 function! RunLastSpec()
-  execute ":Dispatch echo bin/rspec " . s:last_test
+  execute ":Dispatch bin/rspec " . s:last_test
 endfunction
 
 function! InSpecFile()
