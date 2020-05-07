@@ -54,6 +54,10 @@ nnoremap <C-l> <C-w>l
 " Search
 noremap <leader><space> :set hlsearch! hlsearch?<cr>
 
+" Terminal
+" Close the terminal split
+tnoremap <leader>d <C-\><C-n>:q!<CR>
+
 " ===========================
 " Plugins config
 " ===========================
