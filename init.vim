@@ -14,8 +14,11 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'Townk/vim-autoclose'
 Plug 'tomtom/tcomment_vim'
-Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
+
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-rails'
+Plug 'dense-analysis/ale'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -84,6 +87,13 @@ vmap <leader>gb :Gblame<CR>
 " fzf
 nmap <leader>o :Files<CR>
 
+" ale syntax checkers/linters
+let g:ale_linters = {'ruby': ['rubocop']}
+let g:ale_fixers = {'ruby': ['rubocop']}
+let g:ale_fix_on_save = 0
+let g:ale_lint_on_save = 1
+nmap <leader>l :ALEFix<CR>
+
 " ===========================
 " Commands and settings
 " ===========================
@@ -125,28 +135,28 @@ nmap <leader>rl :call RunSpecInLine()<CR>
 nmap <leader>rb :call RunSpecFile()<CR>
 nmap <leader>rr :call RunLastSpec()<CR>
 
-" Run tests
-let s:last_test = ""
-function! RunSpecCommand(command)
+function! RunExternalCommand(command)
   call VimuxRunCommand(a:command)
 endfunction
 
+" Run tests
+let s:last_test = ""
 function! RunSpecInLine()
   if InSpecFile()
     let s:last_test = @% . ":" . line(".")
-    call RunSpecCommand("bin/rspec ". bufname("%") .":" . line("."))
+    call RunExternalCommand("bin/rspec ". bufname("%") .":" . line("."))
   endif
 endfunction
 
 function! RunSpecFile()
   if InSpecFile()
     let s:last_test = @%
-    call RunSpecCommand("bin/rspec " . bufname("%"))
+    call RunExternalCommand("bin/rspec " . bufname("%"))
   endif
 endfunction
 
 function! RunLastSpec()
-  call RunSpecCommand("bin/rspec " . s:last_test)
+  call RunExternalCommand("bin/rspec " . s:last_test)
 endfunction
 
 function! InSpecFile()
