@@ -28,7 +28,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'benmills/vimux'
 
 " Color scheme
-Plug 'phanviet/vim-monokai-pro'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 " ===========================
@@ -111,15 +111,11 @@ set noshowmode
 " Strip trailing whitespace on buffer save/write
 autocmd BufWritePre * :%s/\s\+$//e
 
-" Set monokai-pro as default color scheme
-if $COLORTERM ==# 'truecolor'
-  set termguicolors
+" Set base16
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
 endif
-try
-  colorscheme monokai_pro
-catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme default
-endtry
 
 " Make invisible characters visible using these alternatives
 set list listchars=tab:»\ ,trail:·,nbsp:\|,precedes:<,extends:>
