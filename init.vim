@@ -29,6 +29,7 @@ Plug 'benmills/vimux'
 
 " Color scheme
 Plug 'chriskempson/base16-vim'
+Plug 'dawikur/base16-vim-airline-themes'
 call plug#end()
 
 " ===========================
