@@ -1,4 +1,4 @@
-Outdated! Check [mrcasla/sdotfiles](https://github.com/mrcasals/dotfiles)
+Outdated! Check [mrcasals/dotfiles](https://github.com/mrcasals/dotfiles)
 
 # vimfiles
 
