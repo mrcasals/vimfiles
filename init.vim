@@ -23,8 +23,6 @@ Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-Plug 'tpope/vim-dispatch'
-
 Plug 'vim-airline/vim-airline'
 
 Plug 'christoomey/vim-tmux-navigator'
