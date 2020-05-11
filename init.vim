@@ -83,7 +83,8 @@ map <Leader>co :TComment<CR>
 vmap <leader>gb :Gblame<CR>
 
 " fzf
-nmap <leader>o :Files<CR>
+" only list git-tracked files (ignore those on the `.gitignore` file)
+nmap <leader>o :GFiles<CR>
 
 " ale syntax checkers/linters
 let g:ale_linters = {'ruby': ['rubocop']}
