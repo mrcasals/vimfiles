@@ -1,3 +1,5 @@
+Outdated! Check [mrcasla/sdotfiles](https://github.com/mrcasals/dotfiles)
+
 # vimfiles
 
 This is a fork from the [Codegram vimfiles](https://github.com/codegram/vimfiles)!
